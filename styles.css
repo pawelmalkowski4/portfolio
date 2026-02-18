@@ -33,8 +33,11 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 20px;
   padding-top: 50px;
+  width: 90%;
+  max-width: 1200px;
   box-sizing: border-box;
 }
 
@@ -46,6 +49,7 @@ canvas {
   height: 100vh;
   z-index: -1;
 }
+
 .navbutt {
   font-family: "Futura PT Bold";
   color: black;
@@ -59,7 +63,9 @@ canvas {
   backdrop-filter: blur(1px);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   top: 0;
-  min-width: 120px;
+  flex: 1 1 auto;
+  max-width: 300px;
+  
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -95,9 +101,7 @@ canvas {
   padding: 30px;
   text-align: center;
   transition: all 0.3s ease;
-  
-  /* USUNIĘTO: position: relative i top: 20% - to one mogły powodować nakładanie się! */
-  box-sizing: border-box; /* Ważne: padding nie powiększa kwadratu */
+  box-sizing: border-box;
 }
 
 /* Opis projektu wewnątrz kwadratu */
