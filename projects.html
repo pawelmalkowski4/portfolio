@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 class = "bold">prototype*</h1>
+    <nav>
+      <a href="index.html", class = "navbutt">Home</a>
+      <a href="projects.html", class = "navbutt">Projects</a>
+      <a href="aboutme.html", class = "navbutt">About me</a>
+    </nav>
+    <section class="projects-grid">
+    <a href="https://github.com/pawelmalkowski4/PenguinClassifier" target="_blank" class="project-square">
+        <h3 class="bold">PenguinsClassifier</h3>
+        <p class="project-desc">Implementation of single layer perceptron for penguins classification based of their features. Computation graph was built with a simple microGrad library written in plain python.</p>
+    </a>
+
+    <a href="https://github.com/adrianmikoda/predators-and-prey" target="_blank" class="project-square">
+        <h3 class="bold">Predators and Prey</h3>
+        <p class="project-desc">World simulation where predators and prey compete and reproduce.</p>
+    </a>
+
+    <a href="https://github.com/pawelmalkowski4/Computational-geometry" target="_blank" class="project-square">
+        <h3 class="bold">Delaunay Triangulation</h3>
+        <p class="project-desc">Simple python library for Delaunay triangulation and visualisation.</p>
+    </a>
+
+    <a href="https://github.com/pawelmalkowski4/FEM" target="_blank" class="project-square">
+        <h3 class="bold">Finite elements method</h3>
+        <p class="project-desc">Solving differential equation using FEM. Code is written in Python and jupyter notebook for clear plot and steps visualisation.</p>
+    </a>
+    </section>
+    <canvas id="sphereCanvas"></canvas>
+    <script type="module" src="load.js"></script>
+  </body>
+</html>

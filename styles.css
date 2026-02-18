@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Futura PT Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/FuturaCyrillicBook.woff") format("woff");
+}
+@font-face {
+  font-family: "Futura PT Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/FuturaCyrillicBold.woff") format("woff");
+}
+
+.bold {
+  font-family: "Futura PT Bold";
+  font-weight: 40;
+  color: #000000;
+  text-align: center;
+}
+
+body {
+  font-family: "Futura PT Book";
+  min-height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(40deg, rgba(27, 26, 26, 0.5), transparent 50.71%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.navbutt {
+  font-family: "Futura PT Bold";
+  color: black;
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  backdrop-filter: blur(1px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  top: 0;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbutt:hover{
+  transform: scale(0.98) translateY(5px);
+  box-shadow:  rgba(0, 0, 0, 0.40) 0px 3px 10px 0px;
+  box-shadow: inset rgba(0, 0, 0, 0.10) 1px 2px 2px 1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto 50px auto;
+  z-index: 1;
+}
+
+.project-square {
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  
+  /* USUNIĘTO: position: relative i top: 20% - to one mogły powodować nakładanie się! */
+  box-sizing: border-box; /* Ważne: padding nie powiększa kwadratu */
+}
+
+/* Opis projektu wewnątrz kwadratu */
+.project-desc {
+  font-family: "Futura PT Book";
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Identyczny efekt hover jak w Twoich przyciskach */
+.project-square:hover {
+  transform: scale(0.98) translateY(5px); /* Delikatniejsze skalowanie dla większego obiektu */
+  box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 10px 0px;
+  box-shadow: inset rgba(0, 0, 0, 0.10) 1px 2px 2px 1px;
+}
+
+/* Nagłówek wewnątrz (używa Twojej klasy .bold) */
+.project-square h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Kontener sekcji "O mnie" */
+.about-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin-top: 100px; /* Odstęp od nawigacji */
+  box-sizing: border-box;
+}
+
+/* Szklana ramka "About Me" */
+.about-box {
+  max-width: 800px; /* Optymalna szerokość do czytania tekstu */
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(8px); /* Nieco większy blur dla lepszego kontrastu pod tekstem */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px 0px; /* Gładszy, większy cień */
+  border-radius: 30px; /* Mocniejsze zaokrąglenie */
+  padding: 50px;
+  text-align: left; /* Tekst wyrównany do lewej jest łatwiejszy do czytania */
+  transition: transform 0.3s ease;
+}
+
+/* Efekt delikatnego uniesienia przy najechaniu */
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Nagłówek wewnątrz ramki */
+.about-box h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center; /* Tytuł na środku */
+}
+
+/* Styl tekstu */
+.about-text {
+  font-family: "Futura PT Book";
+  font-size: 1.1rem;
+  line-height: 1.8; /* Większy odstęp między liniami dla czytelności */
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 20px;
+}
