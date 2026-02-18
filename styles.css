@@ -169,3 +169,30 @@ canvas {
   color: rgba(0, 0, 0, 0.85);
   margin-bottom: 20px;
 }
+
+/* Kontener na tagi wewnątrz projektu */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;        /* Pozwala tagom przejść do nowej linii, gdy brakuje miejsca */
+  gap: 10px;              /* Odstępy między tagami */
+  justify-content: center;/* Wyśrodkowanie tagów */
+  margin-top: 20px;       /* Odstęp od opisu projektu */
+  width: 100%;
+}
+
+/* Pojedynczy tag (pastylka) */
+.tag {
+  font-family: "Futura PT Bold";
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.08); /* Delikatne, półprzezroczyste tło */
+  padding: 6px 14px;
+  border-radius: 20px;    /* Zaokrąglone krawędzie (kształt pastylki) */
+  box-shadow: inset rgba(0, 0, 0, 0.05) 1px 1px 3px 0px; /* Subtelny cień wewnętrzny dodający głębi */
+  transition: all 0.3s ease;
+}
+
+/* Opcjonalny efekt po najechaniu myszką na projekt - tagi lekko ciemnieją */
+.project-square:hover .tag {
+  background-color: rgba(0, 0, 0, 0.15);
+}
