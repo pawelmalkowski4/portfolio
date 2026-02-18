@@ -191,8 +191,3 @@ canvas {
   box-shadow: inset rgba(0, 0, 0, 0.05) 1px 1px 3px 0px; /* Subtelny cień wewnętrzny dodający głębi */
   transition: all 0.3s ease;
 }
-
-/* Opcjonalny efekt po najechaniu myszką na projekt - tagi lekko ciemnieją */
-.project-square:hover .tag {
-  background-color: rgba(0, 0, 0, 0.15);
-}
