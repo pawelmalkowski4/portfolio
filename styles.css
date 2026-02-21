@@ -104,7 +104,6 @@ canvas {
   box-sizing: border-box;
 }
 
-/* Opis projektu wewnątrz kwadratu */
 .project-desc {
   font-family: "Futura PT Book";
   font-size: 0.95rem;
@@ -113,74 +112,66 @@ canvas {
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* Identyczny efekt hover jak w Twoich przyciskach */
 .project-square:hover {
-  transform: scale(0.98) translateY(5px); /* Delikatniejsze skalowanie dla większego obiektu */
+  transform: scale(0.98) translateY(5px);
   box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 10px 0px;
   box-shadow: inset rgba(0, 0, 0, 0.10) 1px 2px 2px 1px;
 }
 
-/* Nagłówek wewnątrz (używa Twojej klasy .bold) */
 .project-square h3 {
   margin: 0;
   font-size: 1.4rem;
 }
 
-/* Kontener sekcji "O mnie" */
 .about-section {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
-  margin-top: 100px; /* Odstęp od nawigacji */
+  margin-top: 100px;
   box-sizing: border-box;
 }
 
-/* Szklana ramka "About Me" */
 .about-box {
-  max-width: 800px; /* Optymalna szerokość do czytania tekstu */
+  max-width: 800px;
   width: 100%;
   background-color: transparent;
-  backdrop-filter: blur(8px); /* Nieco większy blur dla lepszego kontrastu pod tekstem */
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px 0px; /* Gładszy, większy cień */
-  border-radius: 30px; /* Mocniejsze zaokrąglenie */
+  backdrop-filter: blur(8px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px 0px;
+  border-radius: 30px;
   padding: 50px;
-  text-align: left; /* Tekst wyrównany do lewej jest łatwiejszy do czytania */
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
-/* Efekt delikatnego uniesienia przy najechaniu */
 .about-box:hover {
   transform: translateY(-5px);
 }
 
-/* Nagłówek wewnątrz ramki */
 .about-box h2 {
   margin-bottom: 30px;
   font-size: 2rem;
-  text-align: center; /* Tytuł na środku */
+  text-align: center;
 }
 
-/* Styl tekstu */
 .about-text {
   font-family: "Futura PT Book";
   font-size: 1.1rem;
-  line-height: 1.8; /* Większy odstęp między liniami dla czytelności */
+  line-height: 1.8;
   color: rgba(0, 0, 0, 0.85);
   margin-bottom: 20px;
 }
 
-/* Kontener na tagi wewnątrz projektu */
 .project-tags {
   display: flex;
-  flex-wrap: wrap;        /* Pozwala tagom przejść do nowej linii, gdy brakuje miejsca */
-  gap: 10px;              /* Odstępy między tagami */
-  justify-content: center;/* Wyśrodkowanie tagów */
-  margin-top: 20px;       /* Odstęp od opisu projektu */
+  flex-wrap: wrap;
+  gap: 10px;             
+  justify-content: center;
+  margin-top: 20px;
   width: 100%;
 }
 
-/* Pojedynczy tag (pastylka) */
+
 .tag {
   font-family: "Futura PT Bold";
   font-size: 0.8rem;
@@ -192,7 +183,34 @@ canvas {
   transition: all 0.3s ease;
 }
 
-/* USUŃ SAMOTNY NAWIAS "}" I DODAJ TO: */
 .project-square:hover .tag {
   background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+.photo-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.photo-container:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px 0px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
