@@ -22,7 +22,7 @@ body {
   font-family: "Futura PT Book";
   min-height: 100vh;
   margin: 0;
-  background-image: linear-gradient(40deg, rgba(27, 26, 26, 0.5), transparent 50.71%);
+  /* background-image: linear-gradient(40deg, rgba(27, 26, 26, 0.5), transparent 10.71%); */
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ canvas {
   text-decoration: none;
   color: black;
   background-color: transparent;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(4px);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius: 20px;
   aspect-ratio: 1 / 1;
